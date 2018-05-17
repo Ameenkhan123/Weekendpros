@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_sign_up_params, only: [:create]
   protected
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up)  { |u| u.permit(  :username, :firstname, :lastname, :contact, :address, :email, :password, :password_confirmation) }
+    devise_parameter_sanitizer.permit(:sign_up)  { |u| u.permit(  :username, :firstname, :lastname, :contact, :address, :email, :password, :password_confirmation, :provider, :uid) }
   end
 
   private
@@ -13,5 +13,11 @@ class ApplicationController < ActionController::Base
     else
       "application"
     end
+  end
+
+  helper_method :current_user
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 end

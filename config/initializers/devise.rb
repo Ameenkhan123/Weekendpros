@@ -258,6 +258,26 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
+  require 'omniauth-google-oauth2'
+  config.omniauth :google_oauth2, "537086105723-3gpcb20edo3bo6cukq59euc5i5lh9pr0.apps.googleusercontent.com", "NYgVMxE6baB63zkayhWrRsOE", { access_type: "offline", approval_prompt: "" }
+  # config.omniauth :facebook, "241531256583193", "d96334cc809e443f0a2e50934460a521", { access_type: "offline", approval_prompt: "" }
+
+  require 'omniauth-facebook'
+  config.omniauth :facebook, "241531256583193", "d96334cc809e443f0a2e50934460a521", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  
+  require 'omniauth-linkedin'
+  config.omniauth :linkedin, "814qewafhtuz83", "aA5xTdSPUZJjlTVS"
+  # User.omniauth_providers.each do |provider_name|
+  #   if provider_name == :developer
+  #     config.omniauth :developer
+  #   else
+  #     api_key = ENV["#{provider_name.upcase}_API_KEY"]
+  #     api_secret = ENV["#{provider_name.upcase}_API_SECRET"]
+  #     config.omniauth provider_name, api_key, api_secret
+  #   end
+  # end
+
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

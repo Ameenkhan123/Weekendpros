@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 2018_05_17_054953) do
     t.string "contact"
     t.string "address"
     t.boolean "terms_conditions"
+    t.string "provider"
+    t.string "uid"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
