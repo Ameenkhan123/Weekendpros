@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get '/auth' => 'auths#index'
+  get '/home' => 'home#index'
   resources :home
   resources :skills
   devise_for :users, controllers: {

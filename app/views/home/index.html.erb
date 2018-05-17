@@ -1,10 +1,10 @@
-<div id="relative" style="background-image: url('<%= asset_path ''%>');">
+<div id="relative" style="background-image: url('<%= asset_path 'denys-nevozhai-100695-unsplash'%>');">
 	<div id="absolute">
-		<h3 class="text-center" id="h3" >Find the Best Professions at Weekend Pros</h3>
+		<h3 class="text-center" id="h3">Find the Best Professions at<br> Weekend Pros</h3>
 		<%= search_form_for @q do |f| %>
-		<div class="input-group left" style="width: 80%;" >
+		<div class="input-group left">
 			<div class="input-group-btn search-panel" >
-				<button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"  id="button_left"> <span id="search_concept">Skill</span>  <span class="caret"></span>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"  id="button_left"> <span id="search_concept">Skill</span>  <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
 					<li class="dropdown-item"><a href="#id"><i class="fa fa-angle-double-right" id="double_right" style="" ></i> <span>Teacher</span></a>
@@ -28,7 +28,7 @@
 	</div>
 </div>
 <div class="container">
-	<div class="row" style="padding-left: 130px; margin: 2%">
+	<div class="row" id="round_skills">
 		<div class="col-sm-4">
 			<div class="round-button">
 				<div class="round-button-circle">
@@ -67,7 +67,7 @@
 
 	<div class="row">
 		<div class="col-sm-3">
-			<div class="card" style="max-width: 220px;">
+			<div class="card"  id="card">
 				<div class="card-body">
 					<p class="card-text-top" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					<button class="btn btn-info btn-block">click</button>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div class="col-sm-3">
-			<div class="card" style="max-width: 220px;">
+			<div class="card" id="card">
 				<div class="card-body">
 					<p class="card-text-top" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					<button class="btn btn-info btn-block">click</button>
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 		<div class="col-sm-3">
-			<div class="card" style="max-width: 220px;">
+			<div class="card" id="card">
 				<div class="card-body">
 					<p class="card-text-top" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					<button class="btn btn-info btn-block">click</button>
@@ -91,7 +91,7 @@
 			</div>
 		</div>
 		<div class="col-sm-3">
-			<div class="card" style="max-width: 220px;">
+			<div class="card" id="card">
 				<div class="card-body">
 					<p class="card-text-top" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					<button class="btn btn-info btn-block">click</button>

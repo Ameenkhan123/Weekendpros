@@ -4,7 +4,7 @@ color: purple;
 #relative {
 position: relative;
 width: auto;
-height: 335px; 
+height: 365px; 
 margin: 0;
 background-position: center;
 background-repeat: no-repeat;
@@ -21,18 +21,21 @@ height: 50px;
 border-radius: 4px;
 }
 #h3{
-font-size: 2rem;
+font-size: 3rem;
+color:white;
+text-shadow: 2px 2px 2px black
 }
 
 #absolute {
 position: absolute;
-margin-top: 8%;
+margin-top: 5%;
 width: 80%;
 margin-left: 9%;
 /*box-shadow: 1px 0px 2px 2px*/
 }
 .left{
 margin-left: 10%;
+width: 80%;
 }
 #search_concept{
 padding-right: 25px;
@@ -73,6 +76,11 @@ font-weight:bold;
 text-decoration:none;
 }
 
+#card{
+  max-width: 220px;
+  box-shadow: 2px 2px 2px black ;
+}
+
 #skills{
 margin-left: 6.1%;
 font-size: 33px;
@@ -92,7 +100,13 @@ font-family: initial;
 #bold{
 font-family: bold;
 font-size: 30px;
+text-shadow: 2px 2px 2px black ;
 }
 #sign_up{
 margin-left: 46%;
+}
+
+#round_skills{
+   padding-left: 130px; 
+   margin: 2%;
 }
