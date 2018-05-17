@@ -1,6 +1,6 @@
-<div id="relative" class="img-fluid">
+<div id="relative" style="background-image: url('<%= asset_path ''%>');">
 	<div id="absolute">
-		<h3 class="text-center" ><b>Find the Best Professions at Weekend Pros</b></h3>
+		<h3 class="text-center" id="h3" >Find the Best Professions at Weekend Pros</h3>
 		<%= search_form_for @q do |f| %>
 		<div class="input-group left" style="width: 80%;" >
 			<div class="input-group-btn search-panel" >
@@ -20,7 +20,7 @@
 			<%= f.search_field :name_cont, class: "form-control", name: "q", placeholder: "Search..",
 			id: "search_key" %> 
 			<span class="input-group-btn">
-				<button class="btn btn-info" type="submit"><i class="fa fa-search" aria-hidden="true"></i>&#xA0;&#xA0;Search&#xA0;&#xA0;</button>
+				<button class="btn btn-info" type="submit" id="search_key"><i class="fa fa-search" aria-hidden="true"></i>&#xA0;&#xA0;Search&#xA0;&#xA0;</button>
 				<%#= f.submit %>
 			</span>
 		</div>

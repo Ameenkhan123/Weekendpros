@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WeekendPros</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>WeekendPros</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application'%>
-    <%= javascript_include_tag 'application' %>
-  </head>
+  <%= stylesheet_link_tag    'application'%>
+  <%= javascript_include_tag 'application' %>
+</head>
 
-  <body>
+<body>
+  <div class="top">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>

@@ -1,29 +1,73 @@
-<h2>Sign up</h2>
+<div>
+	<div class="signup-form-area">
+		<div class="section-form">
+			<form class="signup-form">
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+				<%= devise_error_messages! %>
+				<div class="container">
+					<h2>Account Info</h2>
+					<hr>
+					<div class="row">
+						<div class="col-sm-6">
+							<label class="login-page_label">
+								<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-page_input", name:"email" %>
+								<span class="login-page_placeholder">Email</span>
+							</label>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+							<label class="login-page_label">
+								<%= f.password_field :password, autocomplete: "off", class: "login-page_input", name:"password" %>
+								<span class="login-page_placeholder">Password
+									<% if @minimum_password_length %>
+									<em>(<%= @minimum_password_length %> characters minimum)</em>
+									<% end %><br />
+								</span>
+							</label>
+						</div>
+						<div class="col-sm-6">
+							<label class="login-page_label">
+								<%= f.text_field :username, autocomplete: "username", class: "login-page_input", name:"username" %>
+								<span class="login-page_placeholder">Username</span>
+							</label>
+							<label class="login-page_label">
+								<%= f.password_field :password_confirmation, autocomplete: "off" , class: "login-page_input", name:"password_confirmation" %>
+								<span class="login-page_placeholder">Password Confirmation</span>
+							</label>
+						</div>
+					</div>
+					<h2>Personal Info</h2>
+					<hr>
+					<div class="row">
+						<div class="col-sm-6">
+							<label class="login-page_label">
+								<%= f.text_field :firstname, autocomplete: "firstname", class: "login-page_input", name:"firstname" %>
+								<span class="login-page_placeholder">First name</span>
+							</label>
+							<label class="login-page_label">
+								<%= f.text_field :contact, autocomplete: "contact" , class: "login-page_input", name:"contact" %>
+								<span class="login-page_placeholder">Contact</span>
+							</label>
+						</div>
+						<div class="col-sm-6">
+							<label class="login-page_label">
+								<%= f.text_field :lastname, autocomplete: "lastname" , class: "login-page_input", name:"lastname" %>
+								<span class="login-page_placeholder">Lastname</span>
+							</label>
+							<label class="login-page_label">
+								<%= f.text_field :address, autocomplete: "address" , class: "login-page_input", name:"address" %>
+								<span class="login-page_placeholder">Address</span>
+							</label>
+						</div>
+					</div>
+					<div class="field">
+						<%= f.check_box :terms_conditions, autocomplete: "address" %>terms & conditions
+					</div>
+					<div class="actions" style="text-align: center;">
+						<%= f.submit "Sign up" %>
+					</div>
+					<% end %>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<%#= render "users/shared/links" %>

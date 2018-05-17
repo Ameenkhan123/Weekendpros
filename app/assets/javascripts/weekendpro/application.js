@@ -15,5 +15,5 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
-//= require weekendpro/javascript/form
+//= require weekendpro/javascript/sign_up
 //= require_tree .
