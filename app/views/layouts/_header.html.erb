@@ -13,16 +13,13 @@
           <a class="nav-link" id="navbar_color" >About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="navbar_color">Content</a>
-        </li>
-        <li class="nav-item">
-          <% if user_signed_in? %>
-          <%= link_to('Profile', auths_path, class:"nav-link", id:"navbar_color") %>
-          <% end %>
+          <a class="nav-link" id="navbar_color">Content us</a>
         </li>
         <li class="nav-item">
           <% if user_signed_in? %>
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"nav-link", id:"navbar_color") %>
+          <%else%>
+          <%= link_to('Sing in', auths_path, class:"nav-link", id:"navbar_color") %>
           <% end %>
         </li>
       </ul>

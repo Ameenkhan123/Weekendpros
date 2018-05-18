@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get '/auth' => 'auths#index'
+  get '/auths' => 'auths#index'
   get '/home' => 'home#index'
   resources :home
   resources :auths
