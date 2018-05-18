@@ -263,7 +263,7 @@ Devise.setup do |config|
   # config.omniauth :facebook, "241531256583193", "d96334cc809e443f0a2e50934460a521", { access_type: "offline", approval_prompt: "" }
 
   require 'omniauth-facebook'
-  config.omniauth :facebook, "241531256583193", "d96334cc809e443f0a2e50934460a521", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :facebook, "1922714734408917", "08e6dfbaa2eb778b1711cf6afd190be6", callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: "email"
   
   require 'omniauth-linkedin'
   config.omniauth :linkedin, "814qewafhtuz83", "aA5xTdSPUZJjlTVS"
