@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
+  
   def layout_by_resource
     if devise_controller?
       "weekendpro"
@@ -15,9 +16,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :current_user
+  # helper_method :current_user
 
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
+  # def current_user
+  #   @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  # end
 end
