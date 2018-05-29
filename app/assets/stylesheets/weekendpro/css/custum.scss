@@ -10,6 +10,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 box-shadow: 0px 0px 2px 1px;
+opacity: 0.6; 
 } 
 button, html [type="button"], [type="reset"], [type="submit"] {
 -webkit-appearance: button;
@@ -31,6 +32,7 @@ position: absolute;
 margin-top: 5%;
 width: 80%;
 margin-left: 9%;
+margin-top: -22%;
 /*box-shadow: 1px 0px 2px 2px*/
 }
 .left{
@@ -111,6 +113,8 @@ padding-left: 130px;
 margin: 2%;
 }
 
+/**Socail buttun**/
+
 #login-dp .bottom{
 background-color:rgba(255,255,255,.8);
 border-top:1px solid #ddd;
@@ -129,6 +133,7 @@ margin-bottom: 10px;
 .btn-fb{
 color: #fff;
 background-color:#3b5998;
+height: 34px
 }
 .btn-fb:hover{
 color: #fff;
@@ -138,8 +143,10 @@ background-color:#0077e2;
 .btn-g{
 color: #fff;
 background-color:#a71c1c;
+height: 34px;
 width: 108px;
 }
+
 .btn-g:hover{
 color: #fff;
 background-color:#ef1a1a; 
@@ -147,6 +154,8 @@ background-color:#ef1a1a;
 .btn-ln{
 color: #fff;
 background-color:#3e9ae0;
+height: 34px;
+margin-left: 13%;
 }
 .btn-ln:hover{
 color: #fff;
@@ -155,6 +164,7 @@ background-color:#00aced;
 
 #success{
 width: 108px;
+height: 34px;
 }
 
 @media(max-width:768px){
@@ -166,4 +176,11 @@ color: #fff;
 background-color: inherit;
 border-top:0 none;
 }
+}
+
+/** user image **/
+
+.rounded-circle{
+width: 50px;
+margin-top: -4px
 }

@@ -69,7 +69,8 @@ gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'ransack'
-
+gem 'carrierwave'
+gem 'geocoder'
 # To manage environment variables locally
 gem 'dotenv'
 gem 'bcrypt-ruby', '~> 3.0.0'

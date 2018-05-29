@@ -3,5 +3,5 @@ class HomeController < ApplicationController
   def index
    @q = Skill.ransack(params[:q])
    @skills = @q.result(distinct: true)
- end
+  end
 end

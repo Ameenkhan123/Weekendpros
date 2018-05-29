@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
-  before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_permitted_parameters, if: :devise_controller?
   protected
-  def configure_sign_up_params
+  def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up)  { |u| u.permit(  :username, :firstname, :lastname, :contact, :address, :email, :password, :password_confirmation, :provider, :uid) }
   end
 

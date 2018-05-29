@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
   get '/auths' => 'auths#index'
+  # get '/profile' => 'auths#show'
+  get '/profile' => 'auths#profile'
   get '/home' => 'home#index'
   resources :home
   resources :auths
